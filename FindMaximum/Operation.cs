@@ -8,32 +8,21 @@ namespace FindMaximum
 {
     public class Operation
     {
-        public void FindMaxInteger(int a,int b,int c)
-        {
-            if(a>b && a>c)
-                Console.WriteLine("a is largest");
-            if (b > a && b > c)
-                Console.WriteLine("b is largest");
-            if (c > a && c > b)
-                Console.WriteLine("c is largest");
-        }
-        public void FindMaxFloat(float a, float b, float c)
-        {
-            if (a > b && a > c)
-                Console.WriteLine("a is largest");
-            if (b > a && b > c)
-                Console.WriteLine("b is largest");
-            if (c > a && c > b)
-                Console.WriteLine("c is largest");
-        }
-        public void FindMaxString(string a, string b, string c)
+        public T FindMax<T>(T a, T b, T c) where T : IComparable
         {
             if (a.CompareTo(b) >= 0 && a.CompareTo(c) >= 0)
-                Console.WriteLine("a is largest");
+            {
+                return a;
+            }
             if (b.CompareTo(a) >= 0 && b.CompareTo(c) >= 0)
-                Console.WriteLine("b is largest");
+            {
+                return b;
+            }
             if (c.CompareTo(a) >= 0 && c.CompareTo(b) >= 0)
-                Console.WriteLine("c is largest");
+            {
+                return c;
+            }
+            return a;
         }
 
     }
