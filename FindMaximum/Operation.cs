@@ -19,6 +19,10 @@ namespace FindMaximum
             Array.Sort(this.a);
             return a[^1];
         }
-      
+        public void PrintMax()
+        {
+            T ans = FindMax();
+            Console.WriteLine(ans);
+        }
     }
 }
