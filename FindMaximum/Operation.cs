@@ -17,6 +17,5 @@ namespace FindMaximum
             if (c > a && c > b)
                 Console.WriteLine("c is largest");
         }
-        
     }
 }
