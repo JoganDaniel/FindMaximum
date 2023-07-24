@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace FindMaximum
 {
-    public class Operation
+    public class Operation<T> where T : IComparable
     {
-        public T FindMax<T>(T a, T b, T c) where T : IComparable
+        public T a, b, c;
+        public Operation(T a, T b, T c)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+     
+        public T FindMax(T a, T b, T c) 
         {
             if (a.CompareTo(b) >= 0 && a.CompareTo(c) >= 0)
             {
@@ -24,6 +32,10 @@ namespace FindMaximum
             }
             return a;
         }
-
+        public T PrintMax()
+        {
+            T ans = FindMax(this.a, this.b, this.c);
+            return ans;
+        }
     }
 }
