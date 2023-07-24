@@ -8,34 +8,17 @@ namespace FindMaximum
 {
     public class Operation<T> where T : IComparable
     {
-        public T a, b, c;
-        public Operation(T a, T b, T c)
+        public T[] a;
+        public Operation(T[] a)
         {
             this.a = a;
-            this.b = b;
-            this.c = c;
         }
      
-        public T FindMax(T a, T b, T c) 
+        public T FindMax()
         {
-            if (a.CompareTo(b) >= 0 && a.CompareTo(c) >= 0)
-            {
-                return a;
-            }
-            if (b.CompareTo(a) >= 0 && b.CompareTo(c) >= 0)
-            {
-                return b;
-            }
-            if (c.CompareTo(a) >= 0 && c.CompareTo(b) >= 0)
-            {
-                return c;
-            }
-            return a;
+            Array.Sort(this.a);
+            return a[^1];
         }
-        public T PrintMax()
-        {
-            T ans = FindMax(this.a, this.b, this.c);
-            return ans;
-        }
+      
     }
 }

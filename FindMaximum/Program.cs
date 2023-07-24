@@ -7,8 +7,9 @@ namespace FindMaximum
     {
         private static void Main(string[] args)
         {
-            Operation<string> operation = new Operation<string>("adfsd", "eqwfw", "iufvuyf");
-            Console.WriteLine("Max : "+operation.PrintMax());
+            string[] a = {"ghcygc","avdvsd","ecgfcg","plncb","ftytvyd","qwertyu"};
+            Operation<string> operation = new Operation<string>(a);
+            Console.WriteLine("Max value : "+operation.FindMax());
         }
     }
 }
